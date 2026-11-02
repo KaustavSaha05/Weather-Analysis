@@ -1,29 +1,49 @@
-# 🌤️ Weather Sentiment Analyzer
-
-An intelligent, full-stack web application that combines real-time meteorological data with Natural Language Processing (NLP) sentiment analysis to assess the psychological and environmental impact of current weather conditions. The system provides actionable wellness tips, productivity scores, comfort ratings, and eco-friendly climate recommendations.
+# 🌤️ Weather Sentiment Analysis & Recommendation System
 
 ---
 
-## 📑 Table of Contents
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-3776AB?style=flat&logo=python&logoColor=white" alt="Python Version" />
+  <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Flask-REST%20API-000000?style=flat&logo=flask&logoColor=white" alt="Flask" />
+  <img src="https://img.shields.io/badge/TextBlob-NLP%20Analysis-FF6F00?style=flat&logo=pypi&logoColor=white" alt="TextBlob" />
+  <img src="https://img.shields.io/badge/WeatherAPI-Live%20Telemetry-00B4D8?style=flat&logo=cloud&logoColor=white" alt="WeatherAPI" />
+  <br/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/CSS3-Interactive%20Dashboard-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/License-MIT-4CAF50?style=flat" alt="License MIT" />
+</p>
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Tech Stack](#-tech-stack)
-- [System Architecture](#-system-architecture)
-- [Workflow](#-workflow)
-- [Repository Structure](#-repository-structure)
-- [Prerequisites](#-prerequisites)
-- [How to Run](#-how-to-run)
+<p align="center">
+  <strong>An intelligent full-stack AI system combining real-time meteorological data with Natural Language Processing (NLP) sentiment analysis to assess environmental impact, daily wellness, productivity feasibility, and eco-friendly climate action.</strong>
+</p>
+
+---
+
+## 📌 Table of Contents
+
+---
+
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation & Setup](#installation--setup)
+- [Usage & How to Run](#usage--how-to-run)
   - [1. Backend Setup (Flask API)](#1-backend-setup-flask-api)
   - [2. Frontend Setup (React Application)](#2-frontend-setup-react-application)
-- [API Reference](#-api-reference)
-- [Configuration](#-configuration)
-- [License](#-license)
-- [Author](#-author)
+- [Workflow & How It Works](#workflow--how-it-works)
+- [API Reference](#api-reference)
+- [Configuration](#configuration)
+- [License](#license)
+- [Author](#author)
 
 ---
 
-## 🌟 Overview
+## Overview
 
 The **Weather Sentiment Analyzer** bridges environmental monitoring with natural language perception. Users can query current weather for any city or enter custom weather impressions. The platform processes this text alongside live atmospheric readings (temperature, humidity, wind velocity, sky conditions) to determine:
 
@@ -34,7 +54,7 @@ The **Weather Sentiment Analyzer** bridges environmental monitoring with natural
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Real-Time Weather Integration**: Queries live weather conditions, temperature, humidity, and wind speed via the WeatherAPI.
 - **NLP Sentiment Analysis**: Employs TextBlob to quantify sentiment polarity (negative to positive) and subjectivity (objective vs. subjective perception).
@@ -51,28 +71,7 @@ The **Weather Sentiment Analyzer** bridges environmental monitoring with natural
 
 ---
 
-## 💻 Tech Stack
-
-### Frontend
-| Technology | Description |
-| :--- | :--- |
-| **React 18** | Component-driven UI development and state management (`useState`, `useEffect`) |
-| **CSS3** | Modern responsive grid and flexbox layouts, visual meters, and animations |
-| **HTML5 / JavaScript (ES6+)** | Modern asynchronous client logic with Fetch API |
-| **WeatherAPI** | Third-party REST API for live meteorological data |
-
-### Backend
-| Technology | Description |
-| :--- | :--- |
-| **Python 3.8+** | Core runtime environment |
-| **Flask** | Lightweight WSGI web application framework and RESTful routing |
-| **Flask-CORS** | Cross-Origin Resource Sharing handling for React frontend communication |
-| **TextBlob** | Natural language processing library for sentiment polarity and subjectivity |
-| **Regular Expressions (`re`)** | Regex pattern matching for meteorological text categorization |
-
----
-
-## 🏗️ System Architecture
+## System Architecture
 
 The application adopts a decoupled client-server architecture:
 
@@ -110,7 +109,141 @@ flowchart TD
 
 ---
 
-## 🔄 Workflow
+## Tech Stack
+
+### Frontend
+| Technology | Description |
+| :--- | :--- |
+| **React 18** | Component-driven UI development and state management (`useState`, `useEffect`) |
+| **CSS3** | Modern responsive grid and flexbox layouts, visual meters, and animations |
+| **HTML5 / JavaScript (ES6+)** | Modern asynchronous client logic with Fetch API |
+| **WeatherAPI** | Third-party REST API for live meteorological data |
+
+### Backend
+| Technology | Description |
+| :--- | :--- |
+| **Python 3.8+** | Core runtime environment |
+| **Flask** | Lightweight WSGI web application framework and RESTful routing |
+| **Flask-CORS** | Cross-Origin Resource Sharing handling for React frontend communication |
+| **TextBlob** | Natural language processing library for sentiment polarity and subjectivity |
+| **Regular Expressions (`re`)** | Regex pattern matching for meteorological text categorization |
+
+---
+
+## Project Structure
+
+```text
+Weather_analysis-main/
+├── backend/
+│   ├── app.py                 # Flask server, NLP analysis & recommendation logic
+│   └── requirements.txt       # Python dependencies (Flask, Flask-CORS, TextBlob)
+├── public/
+│   ├── index.html             # HTML entry point
+│   └── manifest.json          # Web app manifest
+├── src/
+│   ├── App.css                # Application styles, meters, cards & animations
+│   ├── App.js                 # Primary React component (UI, state, API calls)
+│   ├── index.css              # Global styles
+│   ├── index.js               # React DOM entry point
+│   └── reportWebVitals.js     # Web performance measuring utility
+├── package.json               # Node.js project manifest & scripts
+├── package-lock.json          # Node dependency lockfile
+└── README.md                  # Project documentation
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- **Node.js**: `v16.x` or higher ([Download Node.js](https://nodejs.org/))
+- **npm**: `v8.x` or higher (bundled with Node.js)
+- **Python**: `3.8` or higher ([Download Python](https://www.python.org/))
+- **pip**: Python package manager
+
+### Installation & Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/KaustavSaha05/Weather-Analysis.git
+   cd Weather-Analysis
+   ```
+
+2. **Install frontend dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Install backend dependencies**:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   cd ..
+   ```
+
+---
+
+## Usage & How to Run
+
+### 1. Backend Setup (Flask API)
+
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+
+2. *(Optional but recommended)* Create and activate a virtual environment:
+   - **Windows**:
+     ```bash
+     python -m venv venv
+     .\venv\Scripts\activate
+     ```
+   - **macOS / Linux**:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+3. Install required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Download TextBlob corpora (if prompted on first run):
+   ```bash
+   python -m textblob.download_corpora
+   ```
+
+5. Start the Flask server:
+   ```bash
+   python app.py
+   ```
+   *The backend will run on `http://localhost:5000`.*
+
+---
+
+### 2. Frontend Setup (React Application)
+
+1. In a new terminal window, navigate to the project root directory:
+   ```bash
+   cd Weather_analysis-main
+   ```
+
+2. Start the React development server:
+   ```bash
+   npm start
+   ```
+
+3. The application will launch in your browser at:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## Workflow & How It Works
 
 ```mermaid
 sequenceDiagram
@@ -135,104 +268,7 @@ sequenceDiagram
 
 ---
 
-## 📁 Repository Structure
-
-```text
-Weather_analysis-main/
-├── backend/
-│   ├── app.py                 # Flask server, NLP analysis & recommendation logic
-│   └── requirements.txt       # Python dependencies (Flask, Flask-CORS, TextBlob)
-├── public/
-│   ├── index.html             # HTML entry point
-│   └── manifest.json          # Web app manifest
-├── src/
-│   ├── App.css                # Application styles, meters, cards & animations
-│   ├── App.js                 # Primary React component (UI, state, API calls)
-│   ├── index.css              # Global styles
-│   ├── index.js               # React DOM entry point
-│   └── reportWebVitals.js     # Web performance measuring utility
-├── package.json               # Node.js project manifest & scripts
-├── package-lock.json          # Node dependency lockfile
-└── README.md                  # Project documentation
-```
-
----
-
-## ⚙️ Prerequisites
-
-Ensure you have the following installed on your machine:
-- **Node.js**: `v16.x` or higher ([Download Node.js](https://nodejs.org/))
-- **npm**: `v8.x` or higher (bundled with Node.js)
-- **Python**: `3.8` or higher ([Download Python](https://www.python.org/))
-- **pip**: Python package manager
-
----
-
-## 🚀 How to Run
-
-### 1. Backend Setup (Flask API)
-
-1. Open a terminal and navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
-
-2. (Optional but recommended) Create and activate a virtual environment:
-   - **Windows**:
-     ```bash
-     python -m venv venv
-     .\venv\Scripts\activate
-     ```
-   - **macOS / Linux**:
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-
-3. Install the required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(Alternatively: `pip install flask flask-cors textblob`)*
-
-4. Download TextBlob corpora (if prompted on first run):
-   ```bash
-   python -m textblob.download_corpora
-   ```
-
-5. Start the Flask server:
-   ```bash
-   python app.py
-   ```
-   *The backend will run on `http://localhost:5000`.*
-
----
-
-### 2. Frontend Setup (React Application)
-
-1. Open a new terminal window and navigate to the project root directory:
-   ```bash
-   cd Weather_analysis-main
-   ```
-
-2. Install Node.js dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the React development server:
-   ```bash
-   npm start
-   ```
-
-4. The application will automatically launch in your default browser at:
-   ```
-   http://localhost:3000
-   ```
-
----
-
-## 📡 API Reference
+## API Reference
 
 ### Analyze Weather & Sentiment
 
@@ -280,7 +316,7 @@ Ensure you have the following installed on your machine:
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### WeatherAPI Key
 The live weather search uses [WeatherAPI](https://www.weatherapi.com/).
@@ -294,16 +330,15 @@ The live weather search uses [WeatherAPI](https://www.weatherapi.com/).
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - feel free to adapt and build upon it!
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Developed by Kaustav Saha**
 
 - 🐙 **GitHub**: [@KaustavSaha05](https://github.com/KaustavSaha05)
 - ✉️ **Email**: [kaustav.saha04@gmail.com](mailto:kaustav.saha04@gmail.com)
-
