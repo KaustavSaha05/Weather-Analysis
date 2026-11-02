@@ -19,6 +19,7 @@ An intelligent, full-stack web application that combines real-time meteorologica
 - [API Reference](#-api-reference)
 - [Configuration](#-configuration)
 - [License](#-license)
+- [Author](#-author)
 
 ---
 
@@ -296,3 +297,13 @@ The live weather search uses [WeatherAPI](https://www.weatherapi.com/).
 ## 📄 License
 
 This project is licensed under the MIT License - feel free to adapt and build upon it!
+
+---
+
+## 👨‍💻 Author
+
+**Developed by Kaustav Saha**
+
+- 🐙 **GitHub**: [@KaustavSaha05](https://github.com/KaustavSaha05)
+- ✉️ **Email**: [kaustav.saha04@gmail.com](mailto:kaustav.saha04@gmail.com)
+
